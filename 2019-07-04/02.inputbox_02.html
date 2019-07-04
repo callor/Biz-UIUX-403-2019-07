@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input box</title>
+</head>
+<body>
+	<section>
+		<article>
+			<!--
+				tag의 id 속성 
+				1개의 파일내에서는 중복되면 안된다.
+
+				label tag의 for 속성
+				input tag의 id 속성 값을 가리키며
+				label을 클릭 했을때
+				해당하는 id가 있는 input box를 입력, 선택
+				할수 있게 활성화 하는 기능
+
+			-->
+			<label for="text1">이름</label>
+			<input type="text" id="text1"><br/>	
+
+			<label for="text2">성별</label>
+			<input type="radio" name="gender" id="text2">남
+			<input type="radio" name="gender" id="text2">여
+			<input type="radio" name="gender" id="text2">기타<br/
+
+			<label for="text3">취미</label>
+			<input type="checkbox" 
+					name="hobby" id="text3">독서
+			<input type="checkbox" 
+					name="hobby" id="text3">등산
+			<input type="checkbox" 
+					name="hobby" id="text3">음악감상
+			<br/>
+
+			<label for="text4">생년월일</label>
+			<input type="date" id="text4"><br/>
+
+			<label for="text5">현재시각</label>
+			<input type="datetime-local" id="text5"><br/>
+
+			<label for="text6">이메일</label>
+			<input type="email" id="text6"><br/>
+
+			<label for="text7">전화번호</label>
+			<input type="phone" id="text7"><br/>
+
+			<label for="text8">주소</label>
+			<!-- combobox -->
+			<select name="city">
+				<option>서울특별시</option>
+				<option>광주광역시</option>
+				<option>부산광역시</option>
+				<option>인천광역시</option>
+				<option>울산광역시</option>
+			</select><br/>
+
+			<label for="text8">버킷리스트</label>
+			<!-- listbox -->
+			<select name="bucket" multiple>
+				<option>롤스로이스</option>
+				<option>포르쉐</option>
+				<option>람보르기니</option>
+				<option>페라리</option>
+				<option>벤트리</option>
+			</select><br/>
+			<label>본문</label>
+			<textarea rows="20" cols="50"></textarea>
+
+			<input type="button" value="누르세요">
+			<button>나도 눌러 주세요</button><br/>
+
+			좋아하는 색깔은?
+			<input type="color"><br/>
+
+			<input type="file">
+
+
+		</article>
+	</section>
+</body>
+</html>
