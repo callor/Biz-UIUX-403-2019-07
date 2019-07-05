@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        span.sa, span.sb, span.sc {
+            border : 1px solid blue;
+            background-color: green;
+            color:blue;
+        }
+
+        /* span tag는 기본 display 속성이 inline */
+        span.sa {
+            display: inline;
+            width:100px;
+            height: 100px;
+        }
+
+        /*
+            inline-block
+            width와 height를 지정하여 박스 크기를 만들수 있지만
+            inline과 같은 글자로서의 속성을 일부 유지한다.
+
+        */
+        span.sb {
+            display: inline-block;
+            width:100px;
+            height: 100px;
+        }
+
+        /*
+            block
+            일반적인 block tag성질을 그대로 모두 물려받는다.
+        */
+        span.sc {
+            display: block;
+            width:100px;
+            height: 100px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+        <div id="div1">
+                <span class="sa">헌법재판소</span> 재판관은 탄핵 또는 금고 이상의 형의 선고에
+                의하지 아니하고는 파면되지 아니한다.
+                <span class="sb">국가안전보장회의</span>의 조직·직무범위 기타 필요한 사항은
+                농·어촌종합개발과 그 지원등 필요한 계획을 수립·시행하여야 한다.
+                모든 국민은 헌법과 법률이 정한 법관에 의하여
+                법률에 의한 재판을 받을 권리를 가진다.
+                각급 <span class="sc">선거관리위원회</span>의 조직·직무범위 기타 필요한 사항은
+                법률로 정한다. 대통령후보자가 1인일 때에는 그 득표수가 선거권자
+            </div>
+    
+</body>
+</html>

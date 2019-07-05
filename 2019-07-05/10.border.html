@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        header h3 {
+            background-color: green;
+            color:white;
+            padding:1.2rem;
+        }
+        .dclass {
+            padding:30px;
+            background-color: #ddd;
+            margin: 5px;
+        }
+
+        /* solid 1px blue : 실선으로 1px 두께의 파란색 태두리 생성 */
+        #col1 {
+            border : solid 1px blue;
+        }
+
+        #col2 {
+            border-top : dotted 2px red;
+            border-bottom : groove 5px green;
+            border-left : dashed 2px blue;
+            border-right: double 1px red;
+        }
+
+        #col3 {
+            border-color: blue;
+            border-top-style: dotted;
+        }
+
+        #col4{
+            border:solid 1px blue;
+            border-radius: 5px;
+        }
+
+        #col5{
+            border:solid 1px blue;
+            border-radius: 50%;
+        }
+
+        #col6{
+            width:200px;
+            height: 200px;
+            border-radius: 50%;
+            border:solid 1px red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Border</h3>
+    </header>
+    <section>
+        <div id="col1" class="dclass">1</div>
+        <div id="col2" class="dclass">2</div>
+        <div id="col3" class="dclass">3</div>
+        <div id="col4" class="dclass">4</div>
+        <div id="col5" class="dclass">5</div>
+        <div id="col6" class="dclass">6</div>
+    </section>
+    
+</body>
+</html>
