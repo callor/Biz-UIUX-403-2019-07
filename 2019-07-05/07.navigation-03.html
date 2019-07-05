@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+        nav {
+            background-color: green;
+        }
+        /*
+            list-style:none
+            리스트의 머리글을 제거
+        */
+        #nav1 {
+            margin:0;
+            padding:0;
+            list-style: none;
+            text-align: center;
+        }
+
+        /*
+            float 
+            box를 브라우저에서 공중에 띄워라 하는 의미
+            이것을 이용한 트릭으로
+            box들을 가로 방향으로 정렬할때 사용
+            그러나 이 방법은 실제적으로 문제가 약간 존재 한다.
+        */
+
+        #nav1 li {
+            float:left;
+        }
+
+        /* #nav1 selector가 감싸고 있는 a tag에만 적용시켜라  */
+        /*
+            display:block
+            in line tag(문자열tag)의 바탕모양을 같은 크기로 지정하기 위해서
+            임시로 box 형태의 tag로 바꾸어라
+            이 설정을 해주어야만 width값이 설정된다.
+        */
+        #nav1 a {
+            display: block;
+            background-color: #ddd;
+            text-decoration: none;
+            padding:5px;
+        }
+
+        /*
+            selector:~~~
+            어떤 효과들을 부여하기 위한 가상 tag 속성
+        */
+        #nav1 a:hover {
+            background-color:#555;
+            color:white;
+        }
+
+        /* #nav1이 감싸고 있는 a tag의 home 클래스에만 적용 */
+        #nav1 a.home {
+            background-color: #4CAF50;
+            color:white;
+        }
+}    </style>
+</head>
+<body>
+    <nav>
+        <ul id="nav1">
+            <li><a href="https://naver.com" target="_new">네이버</a></li>
+            <li><a href="https://daum.net" target="_new">다음</a></li>
+            <li><a href="https://google.com" target="_new">구글</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
