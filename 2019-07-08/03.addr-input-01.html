@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        fieldset {
+            width:500px;
+            margin:0 auto;
+        }
+        label {
+            display: block;
+            float:left;
+            width:100px;
+            padding:8px;
+            text-align: right;
+            color:#009688;
+            font-size:10pt;
+        }
+
+        input {
+            margin:3px;
+            padding:8px;
+            border:1px solid #ccc;
+            width:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>학생정보</legend>
+            <label for="ad_num">학번</label>
+            <input id="ad_num" name="ad_num"><br/>
+
+            <label for="ad_name">이름</label>
+            <input id="ad_name" name="ad_name"><br/>
+
+            <label for="ad_tel">전화번호</label>
+            <input id="ad_tel" name="ad_tel"><br/>
+
+            <label for="ad_addr">주소</label>
+            <input id="ad_addr" name="ad_addr"><br/>
+
+            <button type="submit">전송</button>
+            <button type="reset">다시작성</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        header {
+            background-color: blue;
+            padding:1.1rem;
+            text-align: center;
+            color:white;
+        }
+        nav {
+            background-color: black;
+            color:white;
+        }
+
+        ul.menu {
+            list-style: none;
+            display: flex;
+            margin:0;
+            padding: 0;
+        }
+
+        /* inherit : a tag를 감싸고 있는 tag의 글자색 속성을 이어받아라 */
+        ul.menu a {
+            display: block;
+            color:inherit;
+            text-decoration: none;
+            padding:14px 16px;
+        }
+
+        /* font-weight : bold; 글자체를 볼드체로 */
+        ul.menu a:hover {
+            background-color : #ccc;
+            color:blue;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: blue;
+            color:white;
+            padding:10px;
+        }
+
+        footer address {
+            text-align: center;
+        }
+
+        #home {
+            background-color: rgb(168, 7, 7);
+            color:black;
+            font-weight: bold;
+        }
+
+        #home:hover {
+            background-color: #ccc;
+            color:blue;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h3>나라 Plus</h3>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" id="home">홈</a></li>
+            <li><a href="#">상품정보</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">Abou</a></li>
+        </ul>
+    </nav>
+    <section>
+        <p>우리나라</p>
+        <p>대한민국</p>
+        <p>Republic of Korea</p>
+    </section>
+    <footer>
+        <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
+    
+</body>
+</html>
