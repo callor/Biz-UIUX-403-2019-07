@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        html, body {
+            box-sizing: border-box;
+            background-color: #ffeeaa;
+            width: 100%;
+            height: 100%;
+            padding:10px;
+            margin:0px;
+        }
+
+        section.container > * {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size:2rem;
+            color:#ffeeaa;
+        }
+
+        section.container > :nth-child(1) {
+            background-color: green;
+        }
+        section.container :nth-child(2) {
+            background-color: blue;
+        }
+        section.container :nth-child(3) {
+            background-color: green;
+        }
+        section.container :nth-child(4) {
+            background-color: cyan;
+        }
+
+
+        /* 
+        repeat(12, 1fr)
+        1fr ... 12 번작성
+
+        -columns : 1fr 1fr 1fr
+        -columns : repeat(3,1fr)
+        */
+
+        section.container {
+            height: 100%;
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 40px auto 40px;
+            
+        }
+
+        /* 
+            좌우 크기를 화면크기와 맞추고, 
+            -1 순서를 가장 앞에두어라
+        */
+        header {
+            grid-column:  1 / -1;
+        }
+
+        main {
+            grid-column: 2 / -1;
+        }
+
+        footer {
+            grid-column: 1 / -1;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header>
+            header
+        </header>
+        <nav>
+            <p>메뉴</p>
+        </nav>
+        <main>
+            <p>대한민국</p>
+        </main>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </section>
+ 
+</body>
+</html>

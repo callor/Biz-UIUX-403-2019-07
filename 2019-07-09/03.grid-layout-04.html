@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        h2 {
+            color : #ff6f69;
+            text-align: center;
+        }
+        /* 
+            fr 속성 : 화면의 크기에 따라서 그리드 아이템의 크기를
+            일정한 비율로 설정하여 위치시켜라
+        */
+        ul.list {
+            list-style: none;
+            padding-left:0;
+            display: grid;
+            grid-gap: 2px; /* item들간의 간격 */
+            grid-template-columns: 1fr 1fr; /* 칼럼의 개수 */
+            grid-auto-rows: 80px; /* rows 자동으로 */
+        }
+
+        /* 1번 li와 6번 li를 2칸을 한칸으로 합쳐서 레이웃 구성 */
+        /* li tag를 2칸을(span2)를 1칸으로 합쳐서 보여랴 */
+        ul.list li:nth-child(1) {
+            grid-column: 1/ span 2;
+        }
+        ul.list li:nth-child(6) {
+            grid-column: 1/ span 2;
+        }
+
+
+        ul.list li {
+            background-color: #88d8b0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <h2>Grid CSS Layout</h2>
+    <ul class="list">
+        <li>대한민국</li>
+        <li>우리나라</li>
+        <li>Republic of Korea</li>
+        <li>대한민국</li>
+        <li>우리나라</li>
+        <li>Republic of Korea</li>
+    </ul>
+</body>
+</html>

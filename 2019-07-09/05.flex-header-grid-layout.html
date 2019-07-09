@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        html,body {
+            background-color: #ffeeaa;
+            margin:10px;
+            font-size: 20px;
+        }
+        ul.main-menu {
+            display: flex;
+            list-style: none;
+            padding:10px 20px;
+            font-size:1rem;
+            background-color: #97ceb4;
+            color:blue;
+        }
+
+        ul.main-menu li {
+            padding : 10px 20px;
+            cursor: pointer;
+        }
+
+        ul.main-menu li:last-child {
+            margin-left:auto;
+        }
+
+        ul.main-menu li:hover {
+            background-color: green;
+            color:white;
+        }
+
+        section.grid-page {
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 40px 200px 40px;
+        }
+
+        .header {
+            grid-column: span 12;
+            background-color: #96ceb4;
+        }
+
+        .menu {
+            grid-column: span 2;
+            background-color: #ff6f69;
+        }
+
+        .main {
+            grid-column: span 10;
+            background-color: #ffcc5c;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="main-menu">
+            <li>Home</li>
+            <li>게시판</li>
+            <li>로그인</li>
+        </ul>
+    </header>
+    <section class="grid-page">
+        <article class="header">Header</article>
+        <nav class="menu">navi</nav>
+        <main class="main">main</main>
+
+    </section>
+    
+</body>
+</html>

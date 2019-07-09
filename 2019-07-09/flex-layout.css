@@ -1,0 +1,69 @@
+html,body {
+    width:100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+header {
+    background-color: green;
+    color:white;
+    padding:1rem;
+}
+
+section.wrapper {
+    display: flex;
+}
+
+/* 
+baias : flex-item의 크기를 200px로 맞추고
+shrink : 혹시 내부에 포함된 컨텐츠가 없더라도 크기를 줄이지 말라
+*/
+
+nav,aside {
+    flex-basis: 200px;
+    flex-shrink: 0;
+    border:1px solid blue;
+}
+
+main {
+    padding:10px 16px;
+    border:1px solid red;
+    flex : 0 1 auto; /* grow = 0, shrink = 1, bias = auto */
+}
+
+ul.main-menu {
+    list-style: none;
+    width:200px;
+    margin-left: 0;
+}
+
+/* ul.main-menu와 li tag의 폭을 같은 크기로 설정 */
+ul.main-menu li {
+    width:inherit;
+}
+
+ul.main-menu a {
+    display: block;
+    width : 150px;
+    text-align: left;
+    padding:7px 16px; /* 위아래 7px 좌오 16px */
+    text-decoration: none;
+    line-height: 30px;
+    border-bottom : 1px solid red;
+}
+
+ul.main-menu a:hover {
+    background-color:blueviolet;
+    color:white;
+}
+
+footer {
+    background-color: blue;
+    color:white;
+    padding:0.5rem;
+}
+
+address{
+    text-align: center;
+}
