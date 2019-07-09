@@ -1,0 +1,44 @@
+ul.list {
+    list-style: none;
+    padding:0;
+}
+
+ul.list > li {
+    padding:0;
+}
+
+/* 초기상태에 tag를 감추어라 */
+input.list-check {
+    display: none;
+}
+
+label {
+    padding : 10px;
+    margin:0;
+    border-top :1px solid #ddd;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    display: block;
+}
+
+/* div box를 존재는 하되 화면에서 감추는 효과 주기 */
+div.para {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+div.para > div {
+    margin:10px;
+}
+
+/*
+    radio box가 체크가 되면
+    그 아래에 인접하게 있는 label, 그리고 div.para 항목의
+    최대 높이값을 1000px로 설정하라
+    max-height 설정 : 내부의 content 높이까지 높이가 증가하다가
+    최대 1000px까지만 커져라
+*/
+input.list-check:checked + label + div.para {
+    max-height: 1000px;
+}
