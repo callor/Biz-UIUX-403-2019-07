@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+
+        // 선언되지 않은 변수 사용으로 오류 발생!!
+        // 브라우저 상에서는 아무런 반응이 없지만
+        // 브라우저의 개발자 도구를 열면(F12) console에 해당하는
+        // 오류 내용을 알수 있다
+        // alert(aaa)
+
+        // java에서 method의 역할을 하는 부분이고
+        // JS에서는 일반적으로 함수라고 한다.
+        function f1() {
+          var num1 = 10
+          var num2 = 20
+          let sum = num1 + num2
+          
+          // 선언되지 않은 변수 사용으로 오류 발생!!
+          // 스크립트 오류가 발생을하면
+          // 오류 발생지점 이하의 코드는 모두 무시해 버린다.
+          // alert(aaa)
+
+          let nation = "대한민국"
+          nation = "우리나라"
+
+          // 스크립트가 실행되는 과정에서
+          // 변수내용이나 어떤 값을 확인하고 싶을때
+          // console.log() 함수를 사용한다.
+          // console.log()에 의해 출력된 값은
+          // 개발자 도구에서 확인이 가능하다.
+          console.log(sum)
+          console.log(nation)
+
+          // document.wirte() 메서드를 사용하면
+          // 브라우저에 표시된 모든 항목을 지우고 다시 시작한다.
+          document.write(sum + "<br/>")
+          document.write(nation + "<br/>")
+          document.write("대한민국만세" + "<br/>")
+        }
+
+        function f2() {
+            window.alert("반갑습니다")
+
+        }
+        function f3() {
+            var t = document.getElementById("btn-3").innerText
+            alert(t)
+        }
+
+        /*
+        == 함수형 언어의 특징
+        JS에서는 (익명)함수를 선언하고 함수 자체를 변수에 할당(대입)한다.
+        이렇게 변수에 함수를 할당하면
+        변수가 함수형객체로 탈바꿈하여 마치 f4()라는 이름의 변수를
+        선언하는 것과 같아진다.
+        == 이런 특징으로 인해 JS를 1급 함수형 언어라고 한다.
+        */
+        var f4 = function() {
+            var yesNo = confirm("정말 끝내시겠습니까")
+            if(yesNo) {
+                alert("종료 합니다")
+            } else {
+                alert("종료를 취소합니다")
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <h3>이벤트 핸들링</h3>
+    <p>
+        만약 버튼을 클릭하는 동작을 브라우저가 감시하고 있는 상황이되면
+        버튼의 클릭 동작을 수시로 살펴야하는 불편한 상황이 발생을 할 것이다
+        이런 상황을 우리는 blocking 상태라고 하며
+        윈도우 이전의 운영체제, console 환경의 어플리케이션에서는
+        가능한 일이나 윈도우처럼 멀티테스팅, 멀티스레딩 환경에서는
+        절대 해서는 안되는 일이다
+    </p>
+    <p>
+        그래서 운영체제 차원에서 이벤트(event)라는 것을 지원하며
+        아래처럼 button에 onclick이라는 속성을 지정해주면
+        운영체제가 해당 버튼의 클릭 여부를 감시하고 있다가
+        클릭 동작이 발생하면 설정된 함수를 실행해준다
+    </p>
+    <p>
+        이벤트가 발생했을때 동작하는 함수, 객체, 어떤 것들을
+        이벤트 핸들러 라고한다.
+    </p>
+    <button onclick="f1()">클릭하세요</button>
+    <button onclick="f2()">클릭하세요</button>
+    <button id = "btn-3" onclick="f3()">Korea</button>
+    <button id = "btn-4" onclick="f4()">종료</button>
+</body>
+</html>

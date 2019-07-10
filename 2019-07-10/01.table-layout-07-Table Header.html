@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* width 100% 화면에 좌우가 가득찬 형태의 표가 */
+        table {
+            border : 1px solid blue;
+            width:100%;
+            border-spacing: 10px;
+            background-color: #c1c1c1;
+        }
+        th {
+            text-align: left;
+        }
+        th, td {
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table</h2>
+    <p>
+        Table은 기본값이 border 투명인 상태로 생성이 되며
+        width 값은 td에 포함된 content의 크기에 따라 자동 설정된다 <br/>
+    </p>
+
+    <h3>Table HeaderLine</h3>
+    <p>
+        셀에 제목글자 설정을 하는 것으로 기본값은 bold체 이고 가운데 정렬이다
+        필요에 따라 여러 설정을 지정할수 있다.
+    </p>
+    <table border="1" width="100%">
+        <tr>
+            <th>No</th>
+            <th>작성자</th>
+            <th>제목</th>
+        </tr>
+       
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>가</td>
+            <td>나</td>
+            <td>다</td>
+        </tr>
+        <tr>
+            <td>우리나라</td>
+            <td colspan="2">colspan</td>
+        </tr>
+    </table>
+    
+
+
+
+</body>
+</html>

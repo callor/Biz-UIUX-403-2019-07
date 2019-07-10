@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // js에서 배열을 생성하는 방법
+        var cars = ["소나타","그랜져","포르쉐","람보르기니","벤츠"]
+        var nations = Array()
+        var divs = document.getElementsByName("div")
+        var div_classes = document.getElementsByClassName("div-class")
+
+        // Array()로 생성한 배열에 요소를 추가
+        nations.push("대한민국")
+
+        // 배열리스트를 문자열로 묶고 컴마로 구분하여 보여주기
+        document.write(cars.toString() + "<br>");
+
+        // 특정문자열로 구분자를 형성해서 문자열로 묶어서 보여주기
+        document.write(cars.join(" * ")  + "<br>")
+
+        // 배열의 끝에서 요소를 삭제할때
+        cars.pop()
+        document.write(cars.join(" * ")  + "<br>")
+
+        document.write("배열의 길이:" + cars.length  + "<br>")
+
+        // 특정요소 값을 읽을때
+        document.write( cars[0]  + "<br>")
+
+        // 특정요소의 값을 변경할때
+        cars[0] = "롤스로이스"
+        document.write(cars.join(" * ")  + "<br>")
+
+        /*
+        배열을 반복 수행하는 코드
+        function() : callback 함수라고 하며
+        cars 배열이 반복될때 각각의 배열 요소를 함수에 전달하여
+        연산을 수행한다.
+        */
+        cars.forEach(function(value,index,array){
+            document.write(index + " : " + value + "<br/>")
+        }) 
+
+        var x = function(value,index) {
+            document.write(index + " : " + value + "<br/>")
+        }
+        cars.forEach(x)
+
+
+        /*
+        for(String s : cars) {
+            sysout(s)
+        }
+        */
+
+    </script>
+
+</head>
+<body>
+    
+    <div class="div-class">1</div>
+    <div class="div-class">2</div>
+    <div class="div-class">3</div>
+    <div class="div-class">4</div>
+    <div class="div-class">5</div>
+    <div class="div-class">6</div>
+    <div class="div-class">7</div>
+    <div class="div-class">8</div>
+    <div class="div-class">9</div>
+    <div class="div-class">10</div>
+</body>
+</html>
