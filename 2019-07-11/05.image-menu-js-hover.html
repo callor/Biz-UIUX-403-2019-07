@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        nav.main-menu {
+            display: flex;
+            background-color: rgb(46,117,182);
+        }
+
+        nav.main-menu img {
+            height: 30px;
+            transition : 0.3s;
+        }
+
+        header {
+            background-color: green;
+            padding:1rem;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/"><img src="../images/my_logo.png" width="100px"></a>
+    </header>
+
+    <nav class="main-menu">
+        <img id="m-home" src="../images/menu/menu_home.png">
+        <img id="m-book" src="../images/menu/menu_book.png">
+        <img id="m-book-read" src="../images/menu/menu_book_read.png">
+        <img id="m-login" src="../images/menu/menu_login.png">
+        <img id="m-join" src="../images/menu/menu_join.png">
+    </nav>
+   
+</body>
+<script>
+var img_home = document.getElementById("m-home")
+var img_book = document.getElementById("m-book")
+var img_book_read = document.getElementById("m-book-read")
+var img_login = document.getElementById("m-login")
+var img_join = document.getElementById("m-join")
+
+// 마우스가 이미지에 올려졌을때
+img_home.onmouseover = function() {
+    // img의 소스를 변경하라
+    img_home.src = src="../images/menu/menu_home_h.png"
+}
+
+// 마우스가 이미지를 벗어 났을때
+img_home.onmouseout = function() {
+    // img의 소스를 처음으로 되돌려라
+    img_home.src ="../images/menu/menu_home.png"
+}
+
+img_book.onmouseover = function() {
+    img_book.src = src="../images/menu/menu_book_h.png"
+}
+img_book.onmouseout = function() {
+    img_book.src ="../images/menu/menu_book.png"
+}
+
+img_book_read.onmouseover = function() {
+    img_book_read.src = src="../images/menu/menu_book_read_h.png"
+}
+img_book_read.onmouseout = function() {
+    img_book_read.src ="../images/menu/menu_book_read.png"
+}
+
+img_login.onmouseover = function() {
+    img_login.src = src="../images/menu/menu_login_h.png"
+}
+img_login.onmouseout = function() {
+    img_login.src ="../images/menu/menu_login.png"
+}
+
+img_join.onmouseover = function() {
+    img_join.src = src="../images/menu/menu_join_h.png"
+}
+img_join.onmouseout = function() {
+    img_join.src ="../images/menu/menu_join.png"
+}
+
+
+
+</script>
+</html>

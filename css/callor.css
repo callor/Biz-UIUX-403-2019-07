@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+fieldset {
+    width:50%;
+    margin:10px auto;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    color:blue;
+}
+
+div.bz-in-box {
+    display: flex;
+    margin:3px;
+}
+
+div.bz-in-box label {
+    display: block;
+    /* 화면이 커질때는 자동설정, 화면이 작아지면 80px 까지만 축소 */
+    min-width : 80px; 
+    text-align: right;
+    margin:5px;
+    font-size:9pt;
+    font-weight: bold;
+}
+
+div.bz-in-box input {
+    display: block;
+    width:80%;
+    margin:5px;
+    border : 1px solid gray;
+    border-radius: 5px;
+    padding : 3px 5px; /* box내부의 글자 부분에 여백주기 */
+}
+div.bz-in-box input:hover {
+    border:1px solid red;
+}
+
+div.bz-in-box input:focus {
+    background-color: lightblue;
+}
+
+div.bz-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+}
+button.bz-btn {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 4px 8px;
+    border:none;
+}
+
+/* 오른쪽, 아래, 흐림, 색상 */
+button.bz-btn:hover {
+    box-shadow: 10px 10px 10px grey;
+}
+
+button.bz-btn.bz-save {
+    background-color: blue;
+    color:white;
+}
+
+button.bz-btn.bz-save.bz-green {
+    background-color: green;
+    color:white;
+}
+
+
+button.bz-btn.bz-reset {
+    background-color: orange;
+    color:white;
+}
+
+button.bz-btn.bz-list {
+    background-color: green;
+    color:white;
+}
+
+
