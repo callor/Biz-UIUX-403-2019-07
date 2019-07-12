@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        var num = 3;
+
+        // jq 2.x 이상에서 사용되는 시작위치
+        $(function(){
+            $("#btn").click(function(){
+                // num1 = document.getElementById("i_num1")
+                let num1 = $("#i_num1").val()
+                let num2 = $("#i_num2").val()
+
+                num1 = Number(num1)
+                num2 = Number(num2)
+
+                alert(num1 + num2)
+            })
+        })
+
+        // 누군가 f1() 호출하기 전까지는 실행 되지 않는다.
+        function f1() {
+            alert("대한민국만세")
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <input type="text" id="i_num1"><br>
+    <input type="text" id="i_num2"><br>
+    <button id="btn">확인</button>
+    
+</body>
+</html>

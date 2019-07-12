@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 초기화 코드 */
+        html,
+        body,
+        div,
+        section,
+        article {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* position은 element를 어떤 특정한 위치에 놓기 위한 속성 */
+        /* relative는 실제 어떤 역할을 하지는 않는데
+            다른 element의 position을 다른 값으로 설정하기 위한
+            기준으로 삼는 elemenent
+        */
+        .container {
+            display: flex;
+            flex-flow: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            margin: 20% auto;
+            border: 1px solid blue;
+        }
+
+        .card {
+            position: relative;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+
+        }
+
+        /* 
+            position이 absolute로 설정되었을때는
+            top, left, right, bottom 값을 설정해서
+            위치와 크기를 지정할수 있다.
+        */
+        .layer {
+            position: absolute;
+            /* 
+            100% container의 높이를 100% 보고
+            그 값에서 7px 만큼을 뺀 위치를 top으로 설정하라
+            ※ calc 연산에서 띄어 쓰기 주의
+            */
+            top: calc(100% - 7px);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(111deg,
+                    rgba(250, 143, 191, 1) 4%,
+                    rgba(138, 176, 250, 1) 97%);
+
+            transition: 0.7s;
+
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .icon>i,
+        .detail h2,
+        .detail h2 span {
+            transition: 0.7s;
+        }
+
+        .icon {
+            color: #fa8fa1;
+            line-height: 90px;
+            font-size: 3rem;
+
+        }
+
+        .detail h2 {
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 25px;
+        }
+
+        .detail h2 span {
+            color: #555;
+            font-size: 15px;
+            line-height: 40px;
+        }
+
+        /* card에 마우스를 올리면 layer의 속성을 변경하라 */
+        .card:hover .layer {
+            top: 0px;
+        }
+
+        .card:hover .detail h2 {
+            color: #fff;
+        }
+
+        .card:hover .detail h2>span {
+            color: #fff;
+        }
+
+        .card:hover .icon>i {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article class="container">
+            <!-- email -->
+            <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="detail">
+                        <h2>email<br>
+                            <span>callor@callor.com</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- addr -->
+            <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="detail">
+                        <h2>Address<br>
+                            <span>GwangJu KOREA</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tel -->
+            <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="detail">
+                        <h2>Phone number<br>
+                            <span>010-9999-0000</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </section>
+</body>
+
+</html>

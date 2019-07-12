@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        var num = 3;
+
+        // jq 2.x 이상에서 사용되는 시작위치
+        $(function(){
+            $("#btn").click(function(){
+            
+                // num1 = document.getElementById("i_num1")
+
+                // 1. input box에 입력된 값을 추출하고
+                let num1 = $("#i_num1").val()
+                let num2 = $("#i_num2").val()
+
+                // 2. 문자열형 숫자를 숫자로 변환하고
+                num1 = Number(num1)
+                num2 = Number(num2)
+
+                // 3. 계산을 수행한 후
+                let plus = num1 + num2
+                let minus = num1 - num2
+                let multi = num1 * num2
+
+                // 4. p tag에 설정된 id 해당하는 부분에 값을 표시
+                $("#p_plus").html("<b class='c'>덧셈</b> : " + plus)
+                $("#p_minus").html("<b class='c'>뺄셈</b> : " + minus)
+                $("#p_multi").html("<b class='c'>곱셈</b> : " + multi)
+            
+            })
+        })
+
+        // 누군가 f1() 호출하기 전까지는 실행 되지 않는다.
+        function f1() {
+            alert("대한민국만세")
+        }
+
+    </script>
+    <style>
+        b.c {
+            color:blue;
+        }
+    
+    </style>
+
+</head>
+<body>
+
+    <input type="text" id="i_num1"><br>
+    <input type="text" id="i_num2"><br>
+    <button id="btn">확인</button><br>
+
+    <p id="p_plus"></p>
+    <p id="p_minus"></p>
+    <p id="p_multi"></p>
+    
+</body>
+</html>
