@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+        header {
+            position: fixed;
+            top:0;
+            background-color: #F5B335;
+            width:100%;
+            padding:20px;
+        }
+        nav {
+            margin:0px;
+            padding: 0px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size:2rem;
+            display: inline;
+            padding: 20px 30px;
+            background-color: #F35B66;
+            color:#fff;
+            margin: 50px 0 0 50px;
+        }
+
+        ul {
+            display: flex;
+            margin:50px 50px 0 0; /* top, right, bottom,left */
+            padding: 0;
+            list-style: none;
+        }
+
+        li a {
+            display: block;
+            padding:10px 20px;
+            text-decoration: none;
+            color:black;
+        }
+
+        li a:hover {
+            background-color: #ddd;
+        }
+
+        /* drop down sub menu 들 */
+        li div a {
+            display: block;
+            color:white;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        li.drop-down {
+            display: block;
+        }
+
+        div.drop-down-content {
+            /* 화면이 시작될때 서브 일단 메뉴 감추기 */
+            display: none;
+            position: absolute;
+            background-color: green;
+            min-width: 160px;
+            z-index: 10;
+        }
+
+        li.drop-down:hover div.drop-down-content {
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="/" class="logo">BizNet</a></h1>
+            <ul>
+                <li><a href="#" class="a-menu">도서정보</a></li>
+
+                <li class="drop-down">
+                    <a href="#" class="drop-down-btn">About</a>
+                    <div class="drop-down-content">
+                        <a href="#" class="about-drop">Drop1</a>
+                        <a href="#" class="about-drop">Drop2</a>
+                        <a href="#" class="about-drop">Drop3</a>
+                        <a href="#" class="about-drop">Drop4</a>
+                        <a href="#" class="about-drop">Drop5</a>
+                    </div>
+                </li>
+                <li><a href="#" class="a-menu">로그인</a></li>
+                <li><a href="#" class="a-menu">회원가입</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    
+</body>
+</html><html
