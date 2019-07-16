@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /*
+            flex-box
+            block tag들을 감싸고 있는 block tag에
+            display:block으로 설정하므로써
+            모든 기본 flex-box 설정이 완료된다.
+            flex : 기본이 block으로 된 tag
+            inline-flex : 기본이 inline으로 된 tag
+        */
+        div {
+            display: block;
+            border:1px solid;
+            margin:0;
+            padding:10px;
+        }
+
+        .flex-container,
+                .flex-container-strech,
+                .flex-container-start,
+                .flex-container-end {
+            display: flex; /* nowrap */
+            flex-flow : row wrap; /* direction과 wrap을 한꺼번에 지정 */
+            margin:10px;
+            border-radius: 5px;
+            background-color: green;
+            height: 200px;
+        }
+
+        /* 
+            일단 양끝의 item을 container 양끝에 배치하고
+            나머지부분 여백을 균등하게 배치 
+        */
+        .flex-container-strech {
+            align-items: stretch;
+        }
+
+        /*
+            전체 item의 크기를 계산하여 여백을 균등하게 배치
+        */
+        .flex-container-start {
+            align-items: flex-start;
+        }
+
+        .flex-container-end {
+            align-items: flex-end;
+        }
+
+        .flex-item {
+            margin:10px;
+            padding:20px;
+            text-align: center;
+            border-radius: 5px;
+            background-color:blue;
+            color:white;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item">flex-item 1</div>
+        <div class="flex-item">flex-item 2</div>
+        <div class="flex-item">flex-item 3</div>
+    </div>
+
+    <div class="flex-container-strech">
+        <div class="flex-item">align-items strech</div>
+        <div class="flex-item">align-items strech</div>
+        <div class="flex-item">align-items strech</div>
+    </div>
+
+    <div class="flex-container-start">
+        <div class="flex-item">align-start</div>
+        <div class="flex-item">align-start</div>
+        <div class="flex-item">align-start</div>
+    </div>
+
+    <div class="flex-container-end">
+        <div class="flex-item">aling-end</div>
+        <div class="flex-item">aling-end</div>
+        <div class="flex-item">aling-end</div>
+    </div>
+
+
+
+</body>
+</html>

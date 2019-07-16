@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            border: 1px solid blue;
+            padding:10px;
+        }
+
+        /*
+            justify-content: center;
+            align-items: center;
+
+            위의 두 값을 container에 지정하면
+            item이 container의 중앙에 배치된다.
+
+        */
+
+        div.flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+
+            background-color: green;
+            width:50%;
+            height: 200px;
+            margin: 10px auto;
+        }
+
+        div.flex-item {
+            background-color: blue;
+            color:white;
+            padding:10px;
+            margin:10px;
+        }
+
+        div.flex-item.item1 {
+            font-size:30px;
+            height: 200px;
+        }
+        div.flex-item.item2 {
+            font-size:10px;
+            height: 100px;
+        }
+        div.flex-item.item3 {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item item1">
+            <p></p>
+            <p>나는 flex-item</p>
+        </div>
+        <div class="flex-item item2">
+            나는 flex-item
+            <br><br><br>
+        </div>
+        <div class="flex-item item3">
+            나는 flex-item
+   
+        </div>
+
+    </div>
+   
+</body>
+</html>

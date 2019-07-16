@@ -5,8 +5,8 @@
             "taskName": "chrome",
             "type": "process",
             "command": "chrome.exe",
-            "osx": {
-                "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+            "windows": {
+                "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
             },
             "args": [
                 "${file}"

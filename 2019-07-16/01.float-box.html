@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /*
+            box형 tag들 div, p 등의 tag는 width를 화면크기보다 작게 설성해도
+            그 범위가 화면의 양끝에 모두 적용이된다
+            style이 display:block; 으로 기본 적용된 tag들
+        */
+
+        /*
+           box형 tag를 width를 조절하고 가로로 배치를 하기 위해서
+           변형적으로 float:left 라는 속성을 적용하여 배치에 성공을 했다
+
+           그런데 float로 설정된 box가 끝나고
+           정상적인 box형태의 tag를 위치시키면
+           화면 layout이 무너지는 현상이 발생했다.
+
+           그래서 
+           float 무리들이 끝나는 부분에 의미없는 box를 하나 두고
+           속성을 clear:left 라고 지정을 해주어야 한다.
+           그렇다면 전체적인 레이아웃들이 다소 어색하게 나타나는 현상을
+           막을수 없을때도 있다.
+        */
+        .f-box {
+            float: left;
+            border: 1px solid blue;
+            width: 200px;
+            height: 100px;
+            margin: 1rem;
+        }
+
+        .clear {
+            clear:left;
+            border:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="f-box">떠있는 box</div>
+    <div class="clear"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo corporis non laudantium dolorem porro
+        accusantium illo cumque voluptatibus, suscipit saepe impedit perspiciatis ipsa deleniti tempore obcaecati
+        eveniet iure necessitatibus!
+        Obcaecati aliquam exercitationem maiores explicabo itaque distinctio omnis, quam sequi tempore mollitia hic,
+        neque quae voluptatem animi? Maiores doloribus, similique facilis nisi necessitatibus quae temporibus autem
+        eius. Minima, delectus excepturi!
+        Illo natus ab ducimus dolor commodi beatae eos iusto sed dignissimos saepe repellat illum repudiandae fuga,
+        architecto, nobis impedit ut aspernatur deleniti suscipit est ad? Iste ad sunt eligendi illo.</p>
+
+
+</body>
+
+</html>
